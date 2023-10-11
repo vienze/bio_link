@@ -3,26 +3,6 @@
     {
       "source": "/assets/:path*",
       "destination": "/"
-    },
-    {
-      "source": "/assets/img/:path*",
-      "destination": "/"
-    },
-    {
-      "source": "/assets/css/style.css",
-      "destination": "/"
-    },
-    {
-      "source": "/assets/js/script.js",
-      "destination": "/"
-    },
-    {
-      "source": "/assets/js/my_data_collection.json",
-      "destination": "/"
-    },
-    {
-      "source": "/assets/font/:path*",
-      "destination": "/"
     }
   ]
 }
