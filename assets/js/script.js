@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
 
 async function getData() {
   try {
-    const respons = await fetch("assets/js/data.json");
+    const respons = await fetch("assets/js/my_data_collection.json");
     const datas = await respons.json();
     createElement(datas);
   } catch (e) {

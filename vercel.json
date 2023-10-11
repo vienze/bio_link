@@ -1,12 +1,24 @@
 {
   "rewrites": [
     {
-      "source": "/assets/img/:path*",
-      "destination": "/index.html"
+      "source": "/assets/:path*",
+      "destination": "/"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "/index.html"
+      "source": "/assets/img/:path*",
+      "destination": "/"
+    },
+    {
+      "source": "/assets/css/:path*",
+      "destination": "/"
+    },
+    {
+      "source": "/assets/js/:path*",
+      "destination": "/"
+    },
+    {
+      "source": "/assets/font/:path*",
+      "destination": "/"
     }
   ]
 }
