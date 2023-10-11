@@ -4,28 +4,70 @@ window.addEventListener("load", () => {
   setTimeout(function () {
     document.querySelector(".loading__animation").style.display = "none";
   }, randomNumber);
+
+  getData();
 });
 
-const getData = async () => {
+async function getData() {
   try {
     const respons = await fetch("assets/js/data.json");
     const datas = await respons.json();
-    return datas;
+    createElement(datas);
   } catch (e) {
     alert("Erorr, please contact Developer!");
   }
-};
+}
 
-//scroll to top
-window.onscroll = () => {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("btnTop").style.visibility = "visible";
-  } else {
-    document.getElementById("btnTop").style.visibility = "hidden";
-  }
-};
+function createElement(data) {
+  // header element
+  const headerWrapper = document.getElementById("headerWrapper");
 
-document.getElementById("btnTop").addEventListener("click", () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
+  const headerImg = document.createElement("img");
+  headerImg.classList.add("header__profil");
+  headerImg.src = data.profileImg;
+
+  const headerUsername = document.createElement("h1");
+  headerUsername.classList.add("header__username");
+  headerUsername.innerText = data.username;
+
+  const headerName = document.createElement("p");
+  headerName.classList.add("header__name");
+  headerName.innerText = data.name;
+
+  headerWrapper.append(headerImg, headerUsername, headerName);
+
+  // link element
+  const dataLink = data.link;
+  dataLink.map((link) => {
+    const linkList = document.getElementById("listLink");
+
+    const linkItem = document.createElement("a");
+    linkItem.classList.add("link__item");
+    linkItem.innerText = link.name;
+    linkItem.classList.add(link.color);
+
+    linkList.appendChild(linkItem);
+  });
+
+  // gallery element
+  const dataGallery = data.myGallery;
+  dataGallery.map((gallery) => {
+    const galleryList = document.getElementById("listGallery");
+
+    const galleryItem = document.createElement("div");
+    galleryItem.classList.add("gallery__item");
+
+    const galleryImg = document.createElement("img");
+    galleryImg.classList.add("gallery__img");
+    galleryImg.setAttribute("alt", gallery.name);
+    galleryImg.src = gallery.img;
+
+    const galleryTitle = document.createElement("h3");
+    galleryTitle.classList.add("gallery__title", gallery.color);
+    galleryTitle.innerText = gallery.name;
+
+    galleryItem.append(galleryImg, galleryTitle);
+
+    galleryList.appendChild(galleryItem);
+  });
+}

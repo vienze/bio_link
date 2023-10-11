@@ -52,6 +52,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: var(--font-family);
   background-color: var(--light);
@@ -89,6 +93,7 @@ body {
   font-size: 1rem;
   font-weight: normal;
   opacity: 0.8;
+  text-transform: capitalize;
 }
 
 .main {
@@ -115,12 +120,13 @@ body {
   border-radius: var(--border-radius);
   text-decoration: none;
   color: var(--dark);
-
   font-weight: 400;
   padding: 1rem;
   font-size: 1rem;
   box-shadow: 8px 8px 0 var(--dark);
   transition: box-shadow 250ms ease;
+  text-transform: capitalize;
+  cursor: pointer;
   text-transform: capitalize;
 }
 
@@ -136,7 +142,7 @@ body {
 .gallery__heading {
   font-weight: normal;
   font-size: 1.3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--dark);
   text-align: start;
   padding-bottom: 0.5rem;
@@ -153,16 +159,18 @@ body {
 }
 
 .gallery__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: var(--border);
   border-radius: var(--border-radius);
+  background-color: var(--light);
 
   padding: 1rem;
   box-shadow: 8px 8px 0 var(--dark);
-  position: relative;
+  cursor: pointer;
 }
 
 .gallery__img {
@@ -264,18 +272,30 @@ body {
   }
 }
 
-#btnTop {
-  position: fixed;
-  padding: 0.75rem;
-  transform: rotate(180deg);
-  text-align: center;
-  border: var(--border);
-  border-radius: var(--border-radius);
-  font-size: 1.3rem;
-  right: 1rem;
-  bottom: 1rem;
-  color: var(--dark);
-  background-color: var(--light);
-  visibility: hidden;
-  transition: visibility 250ms ease;
+.large__device {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .large__device {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: fixed;
+    background-color: var(--light);
+  }
+
+  .large__device span {
+    font-size: 1.5rem;
+    color: var(--dark);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: var(--primary);
+  }
 }

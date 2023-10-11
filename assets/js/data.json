@@ -1,6 +1,7 @@
 {
   "username": "Kevinzkurniawan",
   "name": "Vienze",
+  "profileImg": "assets/img/profile.png",
   "link": [
     {
       "name": "github",
@@ -17,7 +18,17 @@
     {
       "name": "Cute_Chicken",
       "img": "assets/img/chicken.png",
-      "color": "bg__danger"
+      "color": "bg__warning"
+    },
+    {
+      "name": "Cute_Chicken",
+      "img": "assets/img/chicken.png",
+      "color": "bg__warning"
+    },
+    {
+      "name": "Cute_Chicken",
+      "img": "assets/img/chicken.png",
+      "color": "bg__warning"
     }
-    ]
+  ]
 }

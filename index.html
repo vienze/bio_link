@@ -4,38 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Vienze" />
+    <meta
+      name="keywords"
+      content="bio link profil, vienze, pixelart, web developer, ui design"
+    />
+    <meta
+      name="description"
+      content="Vienze - A frontend developer with a great passion for technology, particularly in web development."
+    />
+
     <link
       rel="stylesheet"
       href="assets/css/style.css"
       type="text/css"
       media="all"
     />
-    <title>@kevinzkurniawan__Bio link</title>
+    <title>@kevinzkurniawan__Bio_link</title>
   </head>
   <body>
-    <header class="header">
-      <img src="assets/img/profile.png" alt="profile" class="header__profil" />
-      <h1 class="header__username" id="username">Kevinzkurniawan</h1>
-      <p class="header__name" id="name">Vienze</p>
-    </header>
+    <header class="header" id="headerWrapper"></header>
     <main class="main">
-      <section class="link" id="listLink">
-        <a href="#" class="link__item bg__primary">github</a>
-        <a href="#" class="link__item bg__danger">Website</a>
-        <a href="#" class="link__item bg__warning">Tools</a>
-      </section>
+      <section class="link" id="listLink"></section>
       <section class="gallery">
         <h2 class="gallery__heading">My_Gallery</h2>
-        <div class="gallery__list" id="listGallery">
-          <div class="gallery__item">
-            <img
-              src="assets/img/chicken.png"
-              alt="gallery__picture"
-              class="gallery__img pixelated"
-            />
-            <h3 class="gallery__title bg__warning">Cute_Chicken</h3>
-          </div>
-        </div>
+        <div class="gallery__list" id="listGallery"></div>
       </section>
 
       <footer class="footer">
@@ -46,15 +39,24 @@
         >
       </footer>
     </main>
+
     <div class="loading__animation">
       <span>loading</span>
     </div>
-<!--     <button id="btnTop">V</button> -->
+
+    <div class="large__device">
+      <span>Don't not Support in Large Device..</span>
+    </div>
 
     <script
       src="assets/js/script.js"
       type="text/javascript"
       charset="utf-8"
     ></script>
+    <script>
+      if (window.location.pathname.startsWith("/assets")) {
+        window.location.href = "/index.html";
+      }
+    </script>
   </body>
 </html>
