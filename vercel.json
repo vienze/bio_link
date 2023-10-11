@@ -9,11 +9,15 @@
       "destination": "/"
     },
     {
-      "source": "/assets/css/:path*",
+      "source": "/assets/css/style.css",
       "destination": "/"
     },
     {
-      "source": "/assets/js/:path*",
+      "source": "/assets/js/script.js",
+      "destination": "/"
+    },
+    {
+      "source": "/assets/js/my_data_collection.json",
       "destination": "/"
     },
     {
