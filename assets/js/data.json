@@ -1,0 +1,23 @@
+{
+  "username": "Kevinzkurniawan",
+  "name": "Vienze",
+  "link": [
+    {
+      "name": "github",
+      "url": "https://github.com/vienze",
+      "color": "bg__primary"
+    },
+    {
+      "name": "tools",
+      "url": "https://avotools.my.id",
+      "color": "bg__danger"
+    }
+  ],
+  "myGallery": [
+    {
+      "name": "Cute_Chicken",
+      "img": "assets/img/chicken.png",
+      "color": "bg__danger"
+    }
+    ]
+}
